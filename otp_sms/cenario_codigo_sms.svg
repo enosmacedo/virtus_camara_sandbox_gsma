@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <symbol id="pessoa" overflow="visible">
+      <circle cx="0" cy="-24" r="11"/>
+      <path d="M-16,13 Q-16,-11 0,-11 Q16,-11 16,13 Z"/>
+    </symbol>
+    <symbol id="torre" overflow="visible">
+      <g stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round">
+        <line x1="0" y1="-20" x2="-15" y2="25"/><line x1="0" y1="-20" x2="15" y2="25"/><line x1="-9" y1="8" x2="9" y2="8"/>
+        <path d="M-12,-28 Q-19,-19 -12,-10"/><path d="M12,-28 Q19,-19 12,-10"/>
+        <path d="M-20,-34 Q-33,-19 -20,-4"/><path d="M20,-34 Q33,-19 20,-4"/>
+      </g>
+    </symbol>
+    <symbol id="ok" overflow="visible">
+      <circle r="14" fill="#16a34a"/><path d="M-6,0 L-1,5 L7,-5" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="nao" overflow="visible">
+      <circle r="14" fill="#dc2626"/><path d="M-5,-5 L5,5 M5,-5 L-5,5" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <rect width="1400" height="1000" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="700" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#0f172a">O código por SMS que nem o app consegue ver</text>
+  <text x="700" y="84" text-anchor="middle" font-size="18" fill="#475569">Como a operadora envia e confere o código de confirmação no lugar do app</text>
+
+  <!-- Passo 1 -->
+  <rect x="40" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="210" y="128" width="60" height="96" rx="10" fill="#0f172a"/>
+  <rect x="216" y="138" width="48" height="76" fill="#ffffff"/>
+  <rect x="230" y="168" width="20" height="16" rx="3" fill="#2563eb"/>
+  <path d="M233,168 v-5 a7,7 0 0 1 14,0 v5" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <rect x="222" y="194" width="36" height="12" rx="3" fill="#2563eb"/>
+  <text x="240" y="255" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">1.</tspan> O cliente vai entrar no app</text>
+  <text x="240" y="280" text-anchor="middle" font-size="18" fill="#0f172a">ou confirmar um Pix</text>
+
+  <!-- Passo 2 -->
+  <rect x="500" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <use href="#torre" x="620" y="170"/>
+  <text x="620" y="215" text-anchor="middle" font-size="14" fill="#475569">Operadora</text>
+  <line x1="660" y1="165" x2="732" y2="165" stroke="#64748b" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#seta)"/>
+  <rect x="745" y="135" width="80" height="54" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <path d="M760,189 l-6,12 l18,-12 z" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" stroke-linejoin="round"/>
+  <text x="785" y="168" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="700" fill="#075985">482910</text>
+  <text x="785" y="215" text-anchor="middle" font-size="14" fill="#475569">SMS</text>
+  <text x="700" y="255" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">2.</tspan> A operadora cria um código e</text>
+  <text x="700" y="280" text-anchor="middle" font-size="18" fill="#0f172a">manda direto para o celular dele</text>
+
+  <!-- Passo 3 -->
+  <rect x="960" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="1105" cy="172" r="28" fill="#16a34a"/>
+  <path d="M1092,172 L1102,183 L1120,161" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1215" cy="172" r="28" fill="#dc2626"/>
+  <path d="M1203,160 L1227,184 M1227,160 L1203,184" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <text x="1160" y="250" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">3.</tspan> O cliente digita o código.</text>
+  <text x="1160" y="275" text-anchor="middle" font-size="18" fill="#0f172a">A operadora confere e libera ou não.</text>
+
+  <line x1="446" y1="210" x2="494" y2="210" stroke="#64748b" stroke-width="3" marker-end="url(#seta)"/>
+  <line x1="906" y1="210" x2="954" y2="210" stroke="#64748b" stroke-width="3" marker-end="url(#seta)"/>
+
+  <!-- ===== Exemplo 1 ===== -->
+  <rect x="40" y="350" width="640" height="580" rx="16" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="70" y="392" font-size="24" font-weight="700" fill="#166534">Exemplo 1: Pix confirmado</text>
+  <text x="70" y="420" font-size="17" fill="#475569">Ana faz um Pix de R$ 800 e confirma com o código</text>
+
+  <rect x="80" y="445" width="180" height="290" rx="24" fill="#0f172a"/>
+  <rect x="92" y="470" width="156" height="240" fill="#ffffff"/>
+  <rect x="98" y="476" width="144" height="54" rx="8" fill="#e0f2fe"/>
+  <text x="106" y="491" font-size="10" fill="#075985">Mensagem · agora</text>
+  <text x="106" y="507" font-size="12" font-weight="700" fill="#0f172a">482910 é seu código</text>
+  <text x="106" y="522" font-size="12" fill="#0f172a">do Banco</text>
+  <text x="170" y="553" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Confirmar Pix</text>
+  <text x="170" y="573" text-anchor="middle" font-size="13" fill="#334155">R$ 800,00</text>
+  <text x="102" y="597" font-size="11" fill="#64748b">Código</text>
+  <rect x="100" y="602" width="140" height="30" rx="4" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="170" y="623" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="700" letter-spacing="2" fill="#0f172a">482910</text>
+  <rect x="100" y="652" width="140" height="34" rx="6" fill="#2563eb"/>
+  <text x="170" y="674" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Confirmar</text>
+
+  <use href="#pessoa" x="295" y="700" fill="#2563eb"/>
+  <text x="295" y="740" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Ana</text>
+
+  <line x1="268" y1="520" x2="330" y2="520" stroke="#64748b" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#seta)"/>
+  <rect x="340" y="445" width="310" height="290" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <use href="#torre" x="380" y="495"/>
+  <text x="412" y="482" font-size="17" font-weight="700" fill="#4c1d95">A operadora</text>
+  <text x="412" y="504" font-size="17" font-weight="700" fill="#4c1d95">confere:</text>
+  <use href="#ok" x="372" y="560"/>
+  <text x="396" y="557" font-size="15.5" fill="#0f172a">O código foi para o</text>
+  <text x="396" y="577" font-size="15.5" fill="#0f172a">celular da Ana</text>
+  <use href="#ok" x="372" y="625"/>
+  <text x="396" y="622" font-size="15.5" fill="#0f172a">O código digitado</text>
+  <text x="396" y="642" font-size="15.5" fill="#0f172a">está certo</text>
+  <use href="#ok" x="372" y="690"/>
+  <text x="396" y="696" font-size="15.5" fill="#0f172a">Dentro do prazo</text>
+
+  <rect x="70" y="765" width="580" height="70" rx="12" fill="#16a34a"/>
+  <text x="360" y="809" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">✓  Pix confirmado</text>
+  <text x="360" y="875" text-anchor="middle" font-size="17" fill="#334155">Nem o app do banco sabe o código:</text>
+  <text x="360" y="902" text-anchor="middle" font-size="17" fill="#334155">ele vai da operadora direto para a Ana.</text>
+
+  <!-- ===== Exemplo 2 ===== -->
+  <rect x="720" y="350" width="640" height="580" rx="16" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+  <text x="750" y="392" font-size="24" font-weight="700" fill="#991b1b">Exemplo 2: senha roubada</text>
+  <text x="750" y="420" font-size="17" fill="#475569">Um golpista tem a senha da Ana, mas não o celular dela</text>
+
+  <rect x="760" y="445" width="180" height="290" rx="24" fill="#0f172a"/>
+  <rect x="772" y="470" width="156" height="240" fill="#ffffff"/>
+  <text x="850" y="496" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Entrar</text>
+  <text x="850" y="516" text-anchor="middle" font-size="11" fill="#64748b">Digite o código do SMS</text>
+  <g font-family="Consolas, monospace" font-size="15" font-weight="700" fill="#991b1b">
+    <rect x="780" y="528" width="140" height="28" rx="4" fill="#fef2f2" stroke="#fca5a5"/><text x="792" y="548">111111</text>
+    <rect x="780" y="564" width="140" height="28" rx="4" fill="#fef2f2" stroke="#fca5a5"/><text x="792" y="584">123456</text>
+    <rect x="780" y="600" width="140" height="28" rx="4" fill="#fef2f2" stroke="#fca5a5"/><text x="792" y="620">000000</text>
+  </g>
+  <g stroke="#dc2626" stroke-width="3" stroke-linecap="round">
+    <path d="M898,536 l10,10 M908,536 l-10,10"/><path d="M898,572 l10,10 M908,572 l-10,10"/><path d="M898,608 l10,10 M908,608 l-10,10"/>
+  </g>
+  <rect x="780" y="652" width="140" height="34" rx="6" fill="#94a3b8"/>
+  <text x="850" y="674" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Bloqueado</text>
+
+  <use href="#pessoa" x="975" y="700" fill="#1f2937"/>
+  <rect x="963" y="671" width="24" height="7" rx="2" fill="#111827"/>
+  <text x="975" y="740" text-anchor="middle" font-size="14" font-weight="700" fill="#991b1b">golpista</text>
+
+  <line x1="948" y1="520" x2="1010" y2="520" stroke="#64748b" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#seta)"/>
+  <rect x="1020" y="445" width="310" height="290" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <use href="#torre" x="1060" y="495"/>
+  <text x="1092" y="482" font-size="17" font-weight="700" fill="#4c1d95">A operadora</text>
+  <text x="1092" y="504" font-size="17" font-weight="700" fill="#4c1d95">confere:</text>
+  <use href="#nao" x="1052" y="560"/>
+  <text x="1076" y="557" font-size="15.5" fill="#0f172a">O SMS foi para o celular</text>
+  <text x="1076" y="577" font-size="15.5" fill="#0f172a">da Ana, não do golpista</text>
+  <use href="#nao" x="1052" y="625"/>
+  <text x="1076" y="631" font-size="15.5" fill="#0f172a">3 códigos errados</text>
+  <use href="#nao" x="1052" y="690"/>
+  <text x="1076" y="687" font-size="15.5" fill="#0f172a">Verificação cancelada</text>
+  <text x="1076" y="706" font-size="14" fill="#64748b">(limite de tentativas)</text>
+
+  <rect x="750" y="765" width="580" height="70" rx="12" fill="#dc2626"/>
+  <text x="1040" y="798" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">✕  Acesso bloqueado</text>
+  <text x="1040" y="823" text-anchor="middle" font-size="16" fill="#ffffff">e a Ana recebe um alerta</text>
+  <text x="1040" y="875" text-anchor="middle" font-size="17" fill="#334155">Sem o celular da Ana, a senha roubada</text>
+  <text x="1040" y="902" text-anchor="middle" font-size="17" fill="#334155">não basta para entrar.</text>
+
+  <!-- Rodapé -->
+  <text x="700" y="972" text-anchor="middle" font-size="18" fill="#334155">O código vai direto da operadora para o celular do cliente: <tspan font-weight="700">nem o app vê o código</tspan>.</text>
+</svg>

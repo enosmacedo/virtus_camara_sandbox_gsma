@@ -1,0 +1,42 @@
+
+==================== COM maxAge 120
+
+finais 00-49, 94-99:
+  200 {"lastLocationTime":"<agora>","area":{"areaType":"CIRCLE","center":{"latitude":45.754,"longitude":4.86},"radius":800}}
+
+finais 50-89:
+  200 {"lastLocationTime":"<agora>","area":{"areaType":"POLYGON","boundary":[{"latitude":45.754,"longitude":4.86},{"latitude":45.7541,"longitude":4.8601},{"latitude":45.7542,"longitude":4.8602},{"latitude":45.754,"longitude":4.86}]}}
+
+finais 90:
+  400 {"status":400,"code":"INVALID_ARGUMENT","message":"Client specified an invalid argument, request body or query param."}
+
+finais 91:
+  401 {"status":401,"code":"UNAUTHENTICATED","message":"Request not authenticated due to missing, invalid, or expired credentials"}
+
+finais 92:
+  404 {"status":404,"code":"LOCATION_RETRIEVAL.DEVICE_NOT_FOUND","message":"The location server is not able to locate the mobile"}
+
+finais 93:
+  503 {"status":503,"code":"UNAVAILABLE","message":"Service unavailable"}
+
+==================== SEM maxAge
+
+finais 00-43, 45-49, 94-99:
+  200 {"lastLocationTime":"<agora>","area":{"areaType":"CIRCLE","center":{"latitude":45.754,"longitude":4.86},"radius":800}}
+
+finais 44, 90:
+  400 {"status":400,"code":"INVALID_ARGUMENT","message":"Client specified an invalid argument, request body or query param."}
+
+finais 50-89:
+  200 {"lastLocationTime":"<agora>","area":{"areaType":"POLYGON","boundary":[{"latitude":45.754,"longitude":4.86},{"latitude":45.7541,"longitude":4.8601},{"latitude":45.7542,"longitude":4.8602},{"latitude":45.754,"longitude":4.86}]}}
+
+finais 91:
+  401 {"status":401,"code":"UNAUTHENTICATED","message":"Request not authenticated due to missing, invalid, or expired credentials"}
+
+finais 92:
+  404 {"status":404,"code":"LOCATION_RETRIEVAL.DEVICE_NOT_FOUND","message":"The location server is not able to locate the mobile"}
+
+finais 93:
+  503 {"status":503,"code":"UNAVAILABLE","message":"Service unavailable"}
+
+Obs.: no teste SEM maxAge o final 44 deu 400 uma vez; repetido, deu 200 (falha passageira).

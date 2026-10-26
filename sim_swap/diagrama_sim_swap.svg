@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="40" y="52" font-size="28" font-weight="700" fill="#0f172a">API CAMARA SIM Swap no sandbox GSMA Open Gateway</text>
+  <text x="40" y="82" font-size="17" fill="#475569">“O chip deste número foi trocado?” Duas chamadas: check e retrieve-date</text>
+  <rect x="1010" y="62" width="350" height="30" rx="15" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="1185" y="82" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">Testado no sandbox · 410 chamadas</text>
+
+  <!-- Script -->
+  <rect x="40" y="115" width="340" height="235" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="60" y="148" font-size="20" font-weight="700" fill="#1e3a8a">Nosso script (Node.js)</text>
+  <text x="60" y="173" font-size="13.5" fill="#334155">teste_sim_swap.js · caso_real.js</text>
+  <text x="60" y="192" font-size="13.5" fill="#334155">varredura_sim_swap.js · sondagem_maxage.js</text>
+  <rect x="56" y="206" width="308" height="128" rx="6" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="70" y="232" font-size="14" fill="#334155">Telefone de teste:</text>
+  <text x="70" y="262" font-family="Consolas, monospace" font-size="20" fill="#0f172a">+1555000<tspan fill="#b91c1c" font-weight="700">XX</tspan></text>
+  <text x="70" y="290" font-size="13.5" fill="#334155">check com janela de 1, 10 e 100 dias</text>
+  <text x="70" y="312" font-size="13.5" fill="#334155">+ retrieve-date, finais 00 a 99</text>
+
+  <line x1="380" y1="232" x2="418" y2="232" stroke="#334155" stroke-width="2" marker-end="url(#seta)"/>
+
+  <!-- Sandbox -->
+  <rect x="420" y="115" width="940" height="235" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="440" y="148" font-size="19" font-weight="700" fill="#14532d">Sandbox: responde pelo final do telefone</text>
+
+  <rect x="440" y="162" width="440" height="172" rx="8" fill="#ffffff" stroke="#86efac"/>
+  <text x="456" y="186" font-size="15" font-weight="700" fill="#166534">check · “trocado nas últimas X horas?”</text>
+  <g font-family="Consolas, monospace" font-size="12.5" fill="#0f172a">
+    <text x="456" y="212" font-weight="700">POST /sim-swap/v1/check</text>
+    <text x="456" y="236">{ "phoneNumber": "+1555000XX",</text>
+    <text x="456" y="254">  "maxAge": 240 }   <tspan fill="#64748b">← horas (1 a 2400)</tspan></text>
+    <text x="456" y="284" fill="#166534">→ { "swapped": true }</text>
+  </g>
+  <text x="456" y="318" font-size="13" fill="#b45309" font-weight="700">⚠ ignora a janela (ver achado 1)</text>
+
+  <rect x="900" y="162" width="440" height="172" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="916" y="186" font-size="15" font-weight="700" fill="#1e40af">retrieve-date · “quando foi a última troca?”</text>
+  <g font-family="Consolas, monospace" font-size="12.5" fill="#0f172a">
+    <text x="916" y="212" font-weight="700">POST /sim-swap/v1/retrieve-date</text>
+    <text x="916" y="236">{ "phoneNumber": "+1555000XX" }</text>
+    <text x="916" y="266" fill="#1e40af">→ { "latestSimChange":</text>
+    <text x="916" y="284" fill="#1e40af">      "2026-10-10T00:28:38Z" }</text>
+  </g>
+  <text x="916" y="318" font-size="13" fill="#166534" font-weight="700">✓ coerente: usado na POC</text>
+
+  <!-- Tabela de finais -->
+  <rect x="40" y="380" width="650" height="280" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="58" y="412" font-size="19" font-weight="700" fill="#0f172a">Final do telefone → resposta</text>
+  <g font-size="13" font-weight="700" fill="#64748b">
+    <text x="62" y="440">FINAL</text><text x="230" y="440">CHECK</text><text x="400" y="440">RETRIEVE-DATE</text>
+  </g>
+  <g font-size="14">
+    <rect x="50" y="450" width="630" height="28" rx="5" fill="#dcfce7"/>
+    <text x="62" y="469" font-weight="700" fill="#0f172a">00–09, 30–89, 94–99</text><text x="230" y="469" fill="#166534">swapped: false</text><text x="400" y="469" fill="#166534">null (nunca trocado)</text>
+    <rect x="50" y="482" width="630" height="28" rx="5" fill="#fee2e2"/>
+    <text x="62" y="501" font-weight="700" fill="#0f172a">10–19</text><text x="230" y="501" fill="#991b1b" font-weight="700">swapped: true</text><text x="400" y="501" fill="#991b1b" font-weight="700">troca há 5 dias</text>
+    <rect x="50" y="514" width="630" height="28" rx="5" fill="#fef3c7"/>
+    <text x="62" y="533" font-weight="700" fill="#0f172a">20–29</text><text x="230" y="533" fill="#92400e" font-weight="700">swapped: true</text><text x="400" y="533" fill="#92400e" font-weight="700">troca há 30 dias</text>
+    <rect x="50" y="546" width="630" height="28" rx="5" fill="#f8fafc"/>
+    <text x="62" y="565" font-weight="700" fill="#0f172a">90</text><text x="230" y="565" fill="#475569">400 INVALID_ARGUMENT</text>
+    <rect x="50" y="578" width="630" height="28" rx="5" fill="#f8fafc"/>
+    <text x="62" y="597" font-weight="700" fill="#0f172a">91</text><text x="230" y="597" fill="#475569">401 UNAUTHENTICATED</text>
+    <rect x="50" y="610" width="630" height="28" rx="5" fill="#f8fafc"/>
+    <text x="62" y="629" font-weight="700" fill="#0f172a">92 · 93</text><text x="230" y="629" fill="#475569">404 NOT_FOUND · 503 UNAVAILABLE</text>
+  </g>
+
+  <!-- Página x varredura -->
+  <rect x="710" y="380" width="650" height="280" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="728" y="412" font-size="19" font-weight="700" fill="#0f172a">Tabela da página × o que encontramos</text>
+  <g font-size="14" fill="#0f172a">
+    <text x="728" y="446">00–09 e 30–89 · No Swap</text><text x="1020" y="446" fill="#166534">✓ confere</text>
+    <text x="728" y="474">10–19 · troca há 5 dias</text><text x="1020" y="474" fill="#166534">✓ confere no retrieve-date</text>
+    <text x="728" y="502">20–29 · troca há 30 dias</text><text x="1020" y="502" fill="#166534">✓ confere no retrieve-date</text>
+    <text x="728" y="530">92 · Not Found</text><text x="1020" y="530" fill="#166534">✓ 404</text>
+    <text x="728" y="558">93 · Service Unavailable</text><text x="1020" y="558" fill="#166534">✓ 503</text>
+    <text x="728" y="586">90, 91 e 94–99</text><text x="1020" y="586" fill="#b45309" font-weight="700">⚠ não estão na tabela</text>
+    <text x="728" y="614">maxAge do check</text><text x="1020" y="614" fill="#b45309" font-weight="700">⚠ não é respeitado</text>
+  </g>
+
+  <!-- Achados -->
+  <rect x="40" y="680" width="1320" height="290" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="714" font-size="20" font-weight="700" fill="#78350f">O que descobrimos</text>
+  <g font-size="15" fill="#1f2937">
+    <text x="60" y="752"><tspan font-weight="700">1. O check ignora a janela.</tspan></text>
+    <text x="80" y="774">Finais 10–29 dão “trocado” até com maxAge de 1 hora,</text>
+    <text x="80" y="796">embora a troca tenha sido há 5 ou 30 dias.</text>
+    <text x="60" y="834"><tspan font-weight="700">2. O retrieve-date é coerente.</tspan></text>
+    <text x="80" y="856">Datas calculadas a partir de hoje: 5 e 30 dias atrás.</text>
+    <text x="60" y="894"><tspan font-weight="700">3. O maxAge é validado, mas não usado.</tspan></text>
+    <text x="80" y="916">0 ou 2401 horas dão 400; de 1 a 2400 é aceito.</text>
+
+    <text x="720" y="752"><tspan font-weight="700">4. “Nunca trocado” vem como null.</tspan></text>
+    <text x="740" y="774">latestSimChange: null. O código precisa tratar isso</text>
+    <text x="740" y="796">antes de calcular quantos dias se passaram.</text>
+    <text x="720" y="834"><tspan font-weight="700">5. Os exemplos da página são britânicos.</tspan></text>
+    <text x="740" y="856">+44…08 e +44…34: finais sem troca, como a tabela diz.</text>
+    <text x="720" y="894"><tspan font-weight="700">6. Uma falha passageira.</tspan></text>
+    <text x="740" y="916">O final 04 deu 500 uma vez; repetido, deu 200.</text>
+  </g>
+  <text x="60" y="952" font-size="14" fill="#78350f">Por isso a POC usa o retrieve-date e decide a janela do nosso lado: menos de 7 dias bloqueia, até 60 dias aprova com limite.</text>
+</svg>

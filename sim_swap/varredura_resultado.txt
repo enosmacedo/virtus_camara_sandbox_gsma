@@ -1,0 +1,92 @@
+
+==================== CHECK maxAge 24 h (1 dia)
+
+finais 00-03, 05-09, 30-89, 94-99:
+  200 {"swapped":false}
+
+finais 04:
+  500 {"status":500,"code":"INTERNAL","message":"Unknown server error. Typically a server bug."}
+
+finais 10-29:
+  200 {"swapped":true}
+
+finais 90:
+  400 {"status":400,"code":"INVALID_ARGUMENT","message":"Client specified an invalid argument, request body or query param."}
+
+finais 91:
+  401 {"status":401,"code":"UNAUTHENTICATED","message":"Request not authenticated due to missing, invalid, or expired credentials"}
+
+finais 92:
+  404 {"status":404,"code":"NOT_FOUND","message":"A specified resource is not found"}
+
+finais 93:
+  503 {"status":503,"code":"UNAVAILABLE","message":"Service unavailable"}
+
+==================== CHECK maxAge 240 h (10 dias)
+
+finais 00-09, 30-89, 94-99:
+  200 {"swapped":false}
+
+finais 10-29:
+  200 {"swapped":true}
+
+finais 90:
+  400 {"status":400,"code":"INVALID_ARGUMENT","message":"Client specified an invalid argument, request body or query param."}
+
+finais 91:
+  401 {"status":401,"code":"UNAUTHENTICATED","message":"Request not authenticated due to missing, invalid, or expired credentials"}
+
+finais 92:
+  404 {"status":404,"code":"NOT_FOUND","message":"A specified resource is not found"}
+
+finais 93:
+  503 {"status":503,"code":"UNAVAILABLE","message":"Service unavailable"}
+
+==================== CHECK maxAge 2400 h (100 dias)
+
+finais 00-09, 30-89, 94-99:
+  200 {"swapped":false}
+
+finais 10-29:
+  200 {"swapped":true}
+
+finais 90:
+  400 {"status":400,"code":"INVALID_ARGUMENT","message":"Client specified an invalid argument, request body or query param."}
+
+finais 91:
+  401 {"status":401,"code":"UNAUTHENTICATED","message":"Request not authenticated due to missing, invalid, or expired credentials"}
+
+finais 92:
+  404 {"status":404,"code":"NOT_FOUND","message":"A specified resource is not found"}
+
+finais 93:
+  503 {"status":503,"code":"UNAVAILABLE","message":"Service unavailable"}
+
+==================== RETRIEVE-DATE
+
+finais 00-09, 30-89, 94-99:
+  200 {"latestSimChange":null}
+
+finais 10-19:
+  200 {"latestSimChange":"<há 5 dias>"}
+
+finais 20-29:
+  200 {"latestSimChange":"<há 30 dias>"}
+
+finais 90:
+  400 {"status":400,"code":"INVALID_ARGUMENT","message":"Client specified an invalid argument, request body or query param."}
+
+finais 91:
+  401 {"status":401,"code":"UNAUTHENTICATED","message":"Request not authenticated due to missing, invalid, or expired credentials"}
+
+finais 92:
+  404 {"status":404,"code":"NOT_FOUND","message":"A specified resource is not found"}
+
+finais 93:
+  503 {"status":503,"code":"UNAVAILABLE","message":"Service unavailable"}
+
+==================== OBSERVAÇÕES (sondagem_maxage.js)
+- O check IGNORA a janela: finais 10-29 dão swapped:true com maxAge 1, 24, 719 ou 721 h,
+  embora o retrieve-date diga que a troca foi há 5 dias (10-19) ou 30 dias (20-29).
+- maxAge é validado: 0 ou 2401 -> 400 INVALID_ARGUMENT (aceita 1 a 2400 horas).
+- Final 04 deu 500 uma vez no check de 24 h; repetido, deu 200 (falha passageira).

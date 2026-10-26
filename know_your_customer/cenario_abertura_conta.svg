@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <symbol id="pessoa" overflow="visible">
+      <circle cx="0" cy="-24" r="11"/>
+      <path d="M-16,13 Q-16,-11 0,-11 Q16,-11 16,13 Z"/>
+    </symbol>
+    <symbol id="torre" overflow="visible">
+      <g stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round">
+        <line x1="0" y1="-20" x2="-15" y2="25"/><line x1="0" y1="-20" x2="15" y2="25"/><line x1="-9" y1="8" x2="9" y2="8"/>
+        <path d="M-12,-28 Q-19,-19 -12,-10"/><path d="M12,-28 Q19,-19 12,-10"/>
+        <path d="M-20,-34 Q-33,-19 -20,-4"/><path d="M20,-34 Q33,-19 20,-4"/>
+      </g>
+    </symbol>
+    <symbol id="ok" overflow="visible">
+      <circle r="14" fill="#16a34a"/><path d="M-6,0 L-1,5 L7,-5" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="nao" overflow="visible">
+      <circle r="14" fill="#dc2626"/><path d="M-5,-5 L5,5 M5,-5 L-5,5" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <rect width="1400" height="1000" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="700" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#0f172a">Abrir conta pelo celular, sem mandar foto de documento</text>
+  <text x="700" y="84" text-anchor="middle" font-size="18" fill="#475569">Como a operadora ajuda o banco a confirmar quem é o cliente</text>
+
+  <!-- Passo 1 -->
+  <rect x="40" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="210" y="128" width="60" height="96" rx="10" fill="#0f172a"/>
+  <rect x="216" y="138" width="48" height="76" fill="#ffffff"/>
+  <rect x="221" y="147" width="38" height="8" rx="2" fill="#cbd5e1"/>
+  <rect x="221" y="162" width="38" height="8" rx="2" fill="#cbd5e1"/>
+  <rect x="221" y="177" width="38" height="8" rx="2" fill="#cbd5e1"/>
+  <rect x="221" y="194" width="38" height="12" rx="3" fill="#2563eb"/>
+  <text x="240" y="255" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">1.</tspan> O cliente preenche o cadastro</text>
+  <text x="240" y="280" text-anchor="middle" font-size="18" fill="#0f172a">no app: nome, CPF e endereço</text>
+
+  <!-- Passo 2 -->
+  <rect x="500" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <g fill="#1e40af">
+    <polygon points="588,152 620,132 652,152"/>
+    <rect x="592" y="155" width="7" height="26"/><rect x="606" y="155" width="7" height="26"/>
+    <rect x="620" y="155" width="7" height="26"/><rect x="634" y="155" width="7" height="26"/>
+    <rect x="586" y="182" width="68" height="7"/>
+  </g>
+  <text x="620" y="210" text-anchor="middle" font-size="14" fill="#475569">Banco</text>
+  <line x1="668" y1="164" x2="742" y2="164" stroke="#64748b" stroke-width="2" stroke-dasharray="6 5" marker-start="url(#seta)" marker-end="url(#seta)"/>
+  <use href="#torre" x="785" y="170"/>
+  <text x="785" y="210" text-anchor="middle" font-size="14" fill="#475569">Operadora</text>
+  <text x="700" y="248" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">2.</tspan> O banco pergunta à operadora:</text>
+  <text x="700" y="274" text-anchor="middle" font-size="16" font-weight="700" fill="#1e40af">“Os dados são do dono desta linha?</text>
+  <text x="700" y="296" text-anchor="middle" font-size="16" font-weight="700" fill="#1e40af">A linha é antiga? É maior de idade?”</text>
+
+  <!-- Passo 3 -->
+  <rect x="960" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="1105" cy="172" r="28" fill="#16a34a"/>
+  <path d="M1092,172 L1102,183 L1120,161" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1215" cy="172" r="28" fill="#dc2626"/>
+  <path d="M1203,160 L1227,184 M1227,160 L1203,184" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <text x="1160" y="250" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">3.</tspan> Tudo certo: conta aberta na hora.</text>
+  <text x="1160" y="275" text-anchor="middle" font-size="18" fill="#0f172a">Algo estranho: cadastro barrado.</text>
+
+  <line x1="446" y1="210" x2="494" y2="210" stroke="#64748b" stroke-width="3" marker-end="url(#seta)"/>
+  <line x1="906" y1="210" x2="954" y2="210" stroke="#64748b" stroke-width="3" marker-end="url(#seta)"/>
+
+  <!-- ===== Exemplo 1 ===== -->
+  <rect x="40" y="350" width="640" height="580" rx="16" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="70" y="392" font-size="24" font-weight="700" fill="#166534">Exemplo 1: cliente de verdade</text>
+  <text x="70" y="420" font-size="17" fill="#475569">Carla, 34 anos, abre a conta com o próprio celular</text>
+
+  <!-- celular com formulário -->
+  <rect x="80" y="445" width="180" height="290" rx="24" fill="#0f172a"/>
+  <rect x="92" y="470" width="156" height="240" fill="#ffffff"/>
+  <text x="170" y="496" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Abrir conta</text>
+  <g font-size="11" fill="#64748b">
+    <text x="102" y="520">Nome</text><text x="102" y="562">CPF</text><text x="102" y="604">Endereço</text>
+  </g>
+  <g fill="#f1f5f9" stroke="#cbd5e1">
+    <rect x="100" y="525" width="140" height="24" rx="4"/><rect x="100" y="567" width="140" height="24" rx="4"/><rect x="100" y="609" width="140" height="24" rx="4"/>
+  </g>
+  <g font-size="12.5" fill="#0f172a">
+    <text x="107" y="542">Carla Lima</text><text x="107" y="584">123.456.789-00</text><text x="107" y="626">Rua das Flores, 10</text>
+  </g>
+  <rect x="100" y="655" width="140" height="34" rx="6" fill="#2563eb"/>
+  <text x="170" y="677" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Enviar</text>
+
+  <use href="#pessoa" x="295" y="700" fill="#2563eb"/>
+  <text x="295" y="740" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Carla</text>
+
+  <!-- operadora responde -->
+  <line x1="268" y1="520" x2="330" y2="520" stroke="#64748b" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#seta)"/>
+  <rect x="340" y="445" width="310" height="290" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <use href="#torre" x="380" y="495"/>
+  <text x="412" y="482" font-size="17" font-weight="700" fill="#4c1d95">A operadora</text>
+  <text x="412" y="504" font-size="17" font-weight="700" fill="#4c1d95">responde:</text>
+  <use href="#ok" x="372" y="560"/>
+  <text x="396" y="557" font-size="15.5" fill="#0f172a">Nome e CPF são do</text>
+  <text x="396" y="577" font-size="15.5" fill="#0f172a">dono desta linha</text>
+  <use href="#ok" x="372" y="625"/>
+  <text x="396" y="631" font-size="15.5" fill="#0f172a">Linha ativa há 8 anos</text>
+  <use href="#ok" x="372" y="685"/>
+  <text x="396" y="691" font-size="15.5" fill="#0f172a">Maior de idade</text>
+
+  <rect x="70" y="765" width="580" height="70" rx="12" fill="#16a34a"/>
+  <text x="360" y="809" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">✓  Conta aberta em 2 minutos</text>
+  <text x="360" y="875" text-anchor="middle" font-size="17" fill="#334155">Sem foto do RG, sem selfie, sem esperar análise.</text>
+  <text x="360" y="902" text-anchor="middle" font-size="17" fill="#334155">A Carla não precisa fazer nada além do cadastro.</text>
+
+  <!-- ===== Exemplo 2 ===== -->
+  <rect x="720" y="350" width="640" height="580" rx="16" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+  <text x="750" y="392" font-size="24" font-weight="700" fill="#991b1b">Exemplo 2: golpe com dados vazados</text>
+  <text x="750" y="420" font-size="17" fill="#475569">Um golpista usa o nome e o CPF da Paula com um chip novo</text>
+
+  <rect x="760" y="445" width="180" height="290" rx="24" fill="#0f172a"/>
+  <rect x="772" y="470" width="156" height="240" fill="#ffffff"/>
+  <text x="850" y="496" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Abrir conta</text>
+  <g font-size="11" fill="#64748b">
+    <text x="782" y="520">Nome</text><text x="782" y="562">CPF</text><text x="782" y="604">Endereço</text>
+  </g>
+  <g fill="#fef2f2" stroke="#fca5a5">
+    <rect x="780" y="525" width="140" height="24" rx="4"/><rect x="780" y="567" width="140" height="24" rx="4"/><rect x="780" y="609" width="140" height="24" rx="4"/>
+  </g>
+  <g font-size="12.5" fill="#0f172a">
+    <text x="787" y="542">Paula Reis</text><text x="787" y="584">987.654.321-00</text><text x="787" y="626">Av. Brasil, 500</text>
+  </g>
+  <rect x="780" y="655" width="140" height="34" rx="6" fill="#2563eb"/>
+  <text x="850" y="677" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Enviar</text>
+
+  <use href="#pessoa" x="975" y="700" fill="#1f2937"/>
+  <rect x="963" y="671" width="24" height="7" rx="2" fill="#111827"/>
+  <text x="975" y="740" text-anchor="middle" font-size="14" font-weight="700" fill="#991b1b">golpista</text>
+
+  <line x1="948" y1="520" x2="1010" y2="520" stroke="#64748b" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#seta)"/>
+  <rect x="1020" y="445" width="310" height="290" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <use href="#torre" x="1060" y="495"/>
+  <text x="1092" y="482" font-size="17" font-weight="700" fill="#4c1d95">A operadora</text>
+  <text x="1092" y="504" font-size="17" font-weight="700" fill="#4c1d95">responde:</text>
+  <use href="#nao" x="1052" y="560"/>
+  <text x="1076" y="557" font-size="15.5" fill="#0f172a">Nome e CPF não são</text>
+  <text x="1076" y="577" font-size="15.5" fill="#0f172a">do dono desta linha</text>
+  <use href="#nao" x="1052" y="625"/>
+  <text x="1076" y="622" font-size="15.5" fill="#0f172a">Linha ativada ontem</text>
+  <text x="1076" y="642" font-size="14" fill="#64748b">(chip comprado para o golpe)</text>
+
+  <rect x="750" y="765" width="580" height="70" rx="12" fill="#dc2626"/>
+  <text x="1040" y="798" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">✕  Cadastro barrado</text>
+  <text x="1040" y="823" text-anchor="middle" font-size="16" fill="#ffffff">e enviado para análise manual</text>
+  <text x="1040" y="875" text-anchor="middle" font-size="17" fill="#334155">A conta falsa não é aberta e o nome da Paula</text>
+  <text x="1040" y="902" text-anchor="middle" font-size="17" fill="#334155">não é usado para golpes.</text>
+
+  <!-- Rodapé -->
+  <text x="700" y="972" text-anchor="middle" font-size="18" fill="#334155">A operadora só responde <tspan font-weight="700">“confere” ou “não confere”</tspan>: ela não entrega os dados do cliente ao banco.</text>
+</svg>

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1030" viewBox="0 0 1400 1030" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <symbol id="torre" overflow="visible">
+      <g stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round">
+        <line x1="0" y1="-20" x2="-15" y2="25"/><line x1="0" y1="-20" x2="15" y2="25"/><line x1="-9" y1="8" x2="9" y2="8"/>
+        <path d="M-12,-28 Q-19,-19 -12,-10"/><path d="M12,-28 Q19,-19 12,-10"/>
+        <path d="M-20,-34 Q-33,-19 -20,-4"/><path d="M20,-34 Q33,-19 20,-4"/>
+      </g>
+    </symbol>
+    <symbol id="carro" overflow="visible">
+      <path d="M-22,4 L-22,-6 L-12,-8 L-6,-17 L10,-17 L16,-8 L22,-6 L22,4 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+      <path d="M-4,-14 L8,-14 L12,-8 L-8,-8 Z" fill="#bae6fd"/>
+      <circle cx="-12" cy="5" r="5" fill="#111827"/><circle cx="12" cy="5" r="5" fill="#111827"/>
+    </symbol>
+    <symbol id="guincho" overflow="visible">
+      <rect x="-30" y="-10" width="40" height="16" fill="#f59e0b" stroke="#92400e" stroke-width="1.5"/>
+      <path d="M10,6 L10,-18 L24,-18 L30,-8 L30,6 Z" fill="#f59e0b" stroke="#92400e" stroke-width="1.5"/>
+      <rect x="14" y="-15" width="11" height="8" fill="#bae6fd"/>
+      <line x1="-30" y1="-10" x2="-40" y2="-24" stroke="#334155" stroke-width="3"/>
+      <circle cx="-18" cy="8" r="5" fill="#111827"/><circle cx="20" cy="8" r="5" fill="#111827"/>
+      <rect x="-24" y="-22" width="6" height="5" fill="#fbbf24"/>
+    </symbol>
+    <symbol id="pino" overflow="visible">
+      <path d="M0,0 C-10,-14 -12,-20 -12,-25 A12,12 0 0 1 12,-25 C12,-20 10,-14 0,0 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="1.5"/>
+      <circle cx="0" cy="-25" r="4.5" fill="#ffffff"/>
+    </symbol>
+    <clipPath id="mapa1"><rect x="70" y="440" width="580" height="280" rx="10"/></clipPath>
+    <clipPath id="mapa2"><rect x="750" y="440" width="580" height="280" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="1400" height="1030" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="700" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#0f172a">Socorro na estrada sem precisar explicar onde você está</text>
+  <text x="700" y="84" text-anchor="middle" font-size="18" fill="#475569">Como a operadora ajuda a seguradora a achar o cliente e mandar o guincho certo</text>
+
+  <!-- Passo 1 -->
+  <rect x="40" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <use href="#carro" x="210" y="185"/>
+  <polygon points="275,192 297,152 319,192" fill="#facc15" stroke="#a16207" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="295" y="164" width="4" height="15" fill="#713f12"/><rect x="295" y="182" width="4" height="4" fill="#713f12"/>
+  <text x="240" y="250" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">1.</tspan> O carro quebra e o cliente</text>
+  <text x="240" y="275" text-anchor="middle" font-size="18" fill="#0f172a">aperta “Pedir guincho” no app</text>
+
+  <!-- Passo 2 -->
+  <rect x="500" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <path d="M620,138 L648,148 L648,168 Q648,190 620,202 Q592,190 592,168 L592,148 Z" fill="#1e40af"/>
+  <path d="M608,170 L617,179 L633,161" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="620" y="222" text-anchor="middle" font-size="14" fill="#475569">Seguradora</text>
+  <line x1="668" y1="168" x2="742" y2="168" stroke="#64748b" stroke-width="2" stroke-dasharray="6 5" marker-start="url(#seta)" marker-end="url(#seta)"/>
+  <use href="#torre" x="785" y="175"/>
+  <text x="785" y="222" text-anchor="middle" font-size="14" fill="#475569">Operadora</text>
+  <text x="700" y="255" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">2.</tspan> A seguradora pergunta à operadora:</text>
+  <text x="700" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#1e40af">“Onde está o celular do cliente?”</text>
+
+  <!-- Passo 3 -->
+  <rect x="960" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <use href="#guincho" x="1160" y="182"/>
+  <text x="1160" y="250" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">3.</tspan> A operadora devolve uma área</text>
+  <text x="1160" y="275" text-anchor="middle" font-size="18" fill="#0f172a">e o guincho mais perto é enviado</text>
+
+  <line x1="446" y1="210" x2="494" y2="210" stroke="#64748b" stroke-width="3" marker-end="url(#seta)"/>
+  <line x1="906" y1="210" x2="954" y2="210" stroke="#64748b" stroke-width="3" marker-end="url(#seta)"/>
+
+  <!-- ===== Exemplo 1 ===== -->
+  <rect x="40" y="350" width="640" height="610" rx="16" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="70" y="392" font-size="24" font-weight="700" fill="#166534">Exemplo 1: localização encontrada</text>
+  <text x="70" y="420" font-size="17" fill="#475569">Carla, à noite, numa rodovia que ela não conhece</text>
+
+  <rect x="70" y="440" width="580" height="280" rx="10" fill="#ecfccb"/>
+  <line clip-path="url(#mapa1)" x1="70" y1="700" x2="650" y2="460" stroke="#94a3b8" stroke-width="42"/>
+  <line clip-path="url(#mapa1)" x1="70" y1="700" x2="650" y2="460" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="14 12"/>
+  <circle cx="330" cy="592" r="100" fill="#16a34a" fill-opacity="0.13" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <use href="#pino" x="330" y="592"/>
+  <use href="#carro" x="368" y="578"/>
+  <text x="368" y="626" text-anchor="middle" font-size="15" font-weight="700" fill="#7f1d1d" stroke="#ecfccb" stroke-width="5" paint-order="stroke">Carla</text>
+  <text x="330" y="712" text-anchor="middle" font-size="14" fill="#166534" stroke="#ecfccb" stroke-width="4" paint-order="stroke">área informada: raio de 800 m</text>
+  <use href="#guincho" x="585" y="492"/>
+  <text x="585" y="534" text-anchor="middle" font-size="14" font-weight="700" fill="#92400e" stroke="#ecfccb" stroke-width="4" paint-order="stroke">guincho mais perto</text>
+  <path d="M540,500 Q470,520 440,545" stroke="#d97706" stroke-width="2.5" stroke-dasharray="7 5" fill="none" marker-end="url(#seta)"/>
+
+  <rect x="70" y="738" width="580" height="50" rx="10" fill="#eff6ff"/>
+  <text x="90" y="770" font-size="18" fill="#0f172a"><tspan font-weight="700">Seguradora:</tspan> “Onde está o celular da Carla?”</text>
+  <rect x="70" y="796" width="580" height="50" rx="10" fill="#f5f3ff"/>
+  <text x="90" y="828" font-size="18" fill="#0f172a"><tspan font-weight="700">Operadora:</tspan> “Num raio de 800 m deste ponto.”</text>
+  <rect x="70" y="862" width="580" height="70" rx="12" fill="#16a34a"/>
+  <text x="360" y="895" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">✓  Guincho a caminho</text>
+  <text x="360" y="921" text-anchor="middle" font-size="16" fill="#ffffff">a Carla não precisou saber o km da rodovia</text>
+
+  <!-- ===== Exemplo 2 ===== -->
+  <rect x="720" y="350" width="640" height="610" rx="16" fill="#ffffff" stroke="#d97706" stroke-width="3"/>
+  <text x="750" y="392" font-size="24" font-weight="700" fill="#92400e">Exemplo 2: sem localização recente</text>
+  <text x="750" y="420" font-size="17" fill="#475569">Rafael pediu socorro de um trecho sem sinal na serra</text>
+
+  <rect x="750" y="440" width="580" height="280" rx="10" fill="#f1f5f9"/>
+  <line clip-path="url(#mapa2)" x1="750" y1="700" x2="1330" y2="460" stroke="#cbd5e1" stroke-width="42"/>
+  <line clip-path="url(#mapa2)" x1="750" y1="700" x2="1330" y2="460" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="14 12"/>
+  <circle cx="1010" cy="592" r="100" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="4 8"/>
+  <text x="1040" y="570" text-anchor="middle" font-size="90" font-weight="700" fill="#94a3b8">?</text>
+  <g transform="translate(1185,520)">
+    <rect x="-16" y="-28" width="32" height="56" rx="6" fill="#0f172a"/>
+    <rect x="-12" y="-22" width="24" height="40" fill="#e2e8f0"/>
+    <rect x="-8" y="6" width="4" height="6" fill="#94a3b8"/><rect x="-2" y="0" width="4" height="12" fill="#94a3b8"/><rect x="4" y="-6" width="4" height="18" fill="#94a3b8"/>
+    <line x1="-10" y1="-18" x2="10" y2="14" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="1185" y="572" text-anchor="middle" font-size="14" font-weight="700" fill="#475569" stroke="#f1f5f9" stroke-width="4" paint-order="stroke">celular sem sinal</text>
+  <text x="1010" y="712" text-anchor="middle" font-size="14" fill="#64748b" stroke="#f1f5f9" stroke-width="4" paint-order="stroke">última posição conhecida: antiga demais</text>
+
+  <rect x="750" y="738" width="580" height="50" rx="10" fill="#eff6ff"/>
+  <text x="770" y="770" font-size="18" fill="#0f172a"><tspan font-weight="700">Seguradora:</tspan> “Onde está o celular do Rafael?”</text>
+  <rect x="750" y="796" width="580" height="50" rx="10" fill="#f5f3ff"/>
+  <text x="770" y="828" font-size="18" fill="#0f172a"><tspan font-weight="700">Operadora:</tspan> “Não tenho uma posição recente.”</text>
+  <rect x="750" y="862" width="580" height="70" rx="12" fill="#d97706"/>
+  <text x="1040" y="895" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">☎  Atendente liga para o Rafael</text>
+  <text x="1040" y="921" text-anchor="middle" font-size="16" fill="#ffffff">e confirma o local antes de enviar o guincho</text>
+
+  <!-- Rodapé -->
+  <text x="700" y="1003" text-anchor="middle" font-size="18" fill="#334155">A operadora informa uma <tspan font-weight="700">área aproximada</tspan>, não o ponto exato, e só com autorização do cliente.</text>
+</svg>

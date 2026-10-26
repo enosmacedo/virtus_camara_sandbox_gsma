@@ -1,0 +1,43 @@
+
+==================== SEND-CODE (final do telefone)
+
+finais 00-19, 80-81, 83-89, 94-99:
+  200 {"authenticationId":"<id>"}
+
+finais 20-39:
+  403 {"status":403,"code":"ONE_TIME_PASSWORD_SMS.MAX_OTP_CODES_EXCEEDED","message":"Too many OTPs have been requested for this MSISDN. Try later."}
+
+finais 40-59:
+  403 {"status":403,"code":"ONE_TIME_PASSWORD_SMS.PHONE_NUMBER_NOT_ALLOWED","message":"Phone_number can't receive an SMS due to business reasons in the operator."}
+
+finais 60-79, 82:
+  403 {"status":403,"code":"ONE_TIME_PASSWORD_SMS.PHONE_NUMBER_BLOCKED","message":"Phone_number is blocked to receive SMS due to any blocking business reason in the operator."}
+
+finais 90:
+  400 {"status":400,"code":"INVALID_ARGUMENT","message":"Client specified an invalid argument, request body or query param."}
+
+finais 91:
+  401 {"status":401,"code":"UNAUTHENTICATED","message":"Request not authenticated due to missing, invalid, or expired credentials"}
+
+finais 92:
+  404 {"status":404,"code":"NOT_FOUND","message":"A specified resource is not found"}
+
+finais 93:
+  503 {"status":503,"code":"UNAVAILABLE","message":"Service unavailable"}
+
+==================== VALIDATE-CODE (final do código)
+
+finais 00-19, 80-89, 97-99:
+  204 (sem corpo)
+
+finais 20-79, 90, 94-96:
+  400 {"status":400,"code":"INVALID_ARGUMENT","message":"Client specified an invalid argument, request body or query param."}
+
+finais 91:
+  401 {"status":401,"code":"UNAUTHENTICATED","message":"Request not authenticated due to missing, invalid, or expired credentials"}
+
+finais 92:
+  404 {"status":404,"code":"NOT_FOUND","message":"A specified resource is not found"}
+
+finais 93:
+  503 {"status":503,"code":"UNAVAILABLE","message":"Service unavailable"}

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1030" viewBox="0 0 1400 1030" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <symbol id="pessoa" overflow="visible">
+      <circle cx="0" cy="-24" r="11"/>
+      <path d="M-16,13 Q-16,-11 0,-11 Q16,-11 16,13 Z"/>
+    </symbol>
+    <symbol id="torre" overflow="visible">
+      <g stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round">
+        <line x1="0" y1="-20" x2="-15" y2="25"/><line x1="0" y1="-20" x2="15" y2="25"/><line x1="-9" y1="8" x2="9" y2="8"/>
+        <path d="M-12,-28 Q-19,-19 -12,-10"/><path d="M12,-28 Q19,-19 12,-10"/>
+        <path d="M-20,-34 Q-33,-19 -20,-4"/><path d="M20,-34 Q33,-19 20,-4"/>
+      </g>
+    </symbol>
+    <symbol id="chip" overflow="visible">
+      <path d="M-26,-34 L14,-34 L26,-22 L26,34 L-26,34 Z" fill="#fbbf24" stroke="#a16207" stroke-width="2.5" stroke-linejoin="round"/>
+      <rect x="-15" y="-12" width="30" height="30" rx="3" fill="#fde68a" stroke="#a16207" stroke-width="2"/>
+      <g stroke="#a16207" stroke-width="1.6"><line x1="-15" y1="-2" x2="15" y2="-2"/><line x1="-15" y1="8" x2="15" y2="8"/><line x1="0" y1="-12" x2="0" y2="18"/></g>
+    </symbol>
+  </defs>
+
+  <rect width="1400" height="1030" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="700" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#0f172a">O golpe da troca de chip, barrado pela operadora</text>
+  <text x="700" y="84" text-anchor="middle" font-size="18" fill="#475569">Como o banco descobre que o SMS pode estar indo para o celular errado</text>
+
+  <!-- Passo 1 -->
+  <rect x="40" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <use href="#chip" x="185" y="172" transform="translate(185,172) scale(0.8) translate(-185,-172)"/>
+  <line x1="222" y1="172" x2="262" y2="172" stroke="#dc2626" stroke-width="3" marker-end="url(#seta)"/>
+  <use href="#chip" x="300" y="172" transform="translate(300,172) scale(0.8) translate(-300,-172)"/>
+  <text x="300" y="134" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">novo</text>
+  <text x="240" y="250" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">1.</tspan> O golpista transfere o número</text>
+  <text x="240" y="275" text-anchor="middle" font-size="18" fill="#0f172a">da vítima para um chip novo</text>
+
+  <!-- Passo 2 -->
+  <rect x="500" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <g fill="#1e40af">
+    <polygon points="588,152 620,132 652,152"/>
+    <rect x="592" y="155" width="7" height="26"/><rect x="606" y="155" width="7" height="26"/>
+    <rect x="620" y="155" width="7" height="26"/><rect x="634" y="155" width="7" height="26"/>
+    <rect x="586" y="182" width="68" height="7"/>
+  </g>
+  <text x="620" y="210" text-anchor="middle" font-size="14" fill="#475569">Banco</text>
+  <line x1="668" y1="164" x2="742" y2="164" stroke="#64748b" stroke-width="2" stroke-dasharray="6 5" marker-start="url(#seta)" marker-end="url(#seta)"/>
+  <use href="#torre" x="785" y="170"/>
+  <text x="785" y="210" text-anchor="middle" font-size="14" fill="#475569">Operadora</text>
+  <text x="700" y="248" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">2.</tspan> Antes de mandar o SMS, o banco pergunta:</text>
+  <text x="700" y="275" text-anchor="middle" font-size="17" font-weight="700" fill="#1e40af">“O chip deste número foi trocado?”</text>
+
+  <!-- Passo 3 -->
+  <rect x="960" y="110" width="400" height="200" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="1105" cy="172" r="28" fill="#16a34a"/>
+  <path d="M1092,172 L1102,183 L1120,161" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1215" cy="172" r="28" fill="#dc2626"/>
+  <path d="M1203,160 L1227,184 M1227,160 L1203,184" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <text x="1160" y="250" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700">3.</tspan> Chip de sempre: SMS enviado.</text>
+  <text x="1160" y="275" text-anchor="middle" font-size="18" fill="#0f172a">Troca recente: verificação extra.</text>
+
+  <line x1="446" y1="210" x2="494" y2="210" stroke="#64748b" stroke-width="3" marker-end="url(#seta)"/>
+  <line x1="906" y1="210" x2="954" y2="210" stroke="#64748b" stroke-width="3" marker-end="url(#seta)"/>
+
+  <!-- ===== Exemplo 1 ===== -->
+  <rect x="40" y="350" width="640" height="610" rx="16" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="70" y="392" font-size="24" font-weight="700" fill="#166534">Exemplo 1: chip de sempre</text>
+  <text x="70" y="420" font-size="17" fill="#475569">Ana faz um Pix de R$ 5.000 pelo app</text>
+
+  <rect x="70" y="440" width="580" height="280" rx="10" fill="#f0fdf4"/>
+  <rect x="120" y="460" width="150" height="240" rx="20" fill="#0f172a"/>
+  <rect x="130" y="482" width="130" height="196" fill="#ffffff"/>
+  <text x="195" y="512" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Pix</text>
+  <text x="195" y="540" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">R$ 5.000,00</text>
+  <rect x="140" y="560" width="110" height="48" rx="6" fill="#e0f2fe"/>
+  <text x="148" y="578" font-size="10" fill="#075985">SMS · Banco</text>
+  <text x="148" y="597" font-size="12" font-weight="700" fill="#0f172a">Código: 391204</text>
+  <rect x="140" y="630" width="110" height="30" rx="6" fill="#2563eb"/>
+  <text x="195" y="650" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">Confirmar</text>
+  <use href="#pessoa" x="320" y="676" fill="#2563eb"/>
+  <text x="320" y="712" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Ana</text>
+  <use href="#chip" x="510" y="560"/>
+  <text x="510" y="630" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">chip da Ana</text>
+  <text x="510" y="650" text-anchor="middle" font-size="14" fill="#475569">o mesmo há anos</text>
+
+  <rect x="70" y="738" width="580" height="50" rx="10" fill="#eff6ff"/>
+  <text x="90" y="770" font-size="18" fill="#0f172a"><tspan font-weight="700">Banco:</tspan> “O chip da Ana foi trocado?”</text>
+  <rect x="70" y="796" width="580" height="50" rx="10" fill="#f5f3ff"/>
+  <text x="90" y="828" font-size="18" fill="#0f172a"><tspan font-weight="700">Operadora:</tspan> “Nunca foi trocado.”</text>
+  <rect x="70" y="862" width="580" height="70" rx="12" fill="#16a34a"/>
+  <text x="360" y="895" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">✓  Código SMS enviado</text>
+  <text x="360" y="921" text-anchor="middle" font-size="16" fill="#ffffff">e o Pix segue normalmente</text>
+
+  <!-- ===== Exemplo 2 ===== -->
+  <rect x="720" y="350" width="640" height="610" rx="16" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+  <text x="750" y="392" font-size="24" font-weight="700" fill="#991b1b">Exemplo 2: golpe da troca de chip</text>
+  <text x="750" y="420" font-size="17" fill="#475569">Um golpista ativou o número do Bruno num chip novo</text>
+
+  <rect x="750" y="440" width="580" height="280" rx="10" fill="#fef2f2"/>
+  <!-- celular do Bruno sem sinal -->
+  <rect x="1140" y="470" width="120" height="200" rx="18" fill="#0f172a"/>
+  <rect x="1150" y="490" width="100" height="160" fill="#e2e8f0"/>
+  <g transform="translate(1200,550)">
+    <rect x="-16" y="6" width="7" height="10" fill="#94a3b8"/><rect x="-5" y="-2" width="7" height="18" fill="#94a3b8"/><rect x="6" y="-12" width="7" height="28" fill="#94a3b8"/>
+    <line x1="-20" y1="-16" x2="18" y2="20" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <text x="1200" y="606" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">Sem serviço</text>
+  <use href="#pessoa" x="1300" y="600" fill="#2563eb"/>
+  <text x="1200" y="700" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a" stroke="#fef2f2" stroke-width="4" paint-order="stroke">celular do Bruno</text>
+  <text x="1200" y="716" text-anchor="middle" font-size="13" fill="#475569" stroke="#fef2f2" stroke-width="4" paint-order="stroke">perde o sinal de repente</text>
+  <!-- golpista com chip novo -->
+  <use href="#pessoa" x="830" y="674" fill="#1f2937"/>
+  <rect x="818" y="645" width="24" height="7" rx="2" fill="#111827"/>
+  <text x="830" y="710" text-anchor="middle" font-size="14" font-weight="700" fill="#991b1b">golpista</text>
+  <use href="#chip" x="900" y="560"/>
+  <text x="900" y="516" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">chip novo</text>
+  <path d="M1132,560 Q1030,520 940,555" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 5" fill="none" marker-end="url(#seta)"/>
+  <text x="1036" y="520" text-anchor="middle" font-size="14" font-style="italic" fill="#991b1b">número transferido</text>
+  <text x="1010" y="640" text-anchor="middle" font-size="15" fill="#0f172a">pede “esqueci a senha”</text>
+  <text x="1010" y="660" text-anchor="middle" font-size="15" fill="#0f172a">para receber o SMS</text>
+
+  <rect x="750" y="738" width="580" height="50" rx="10" fill="#eff6ff"/>
+  <text x="770" y="770" font-size="18" fill="#0f172a"><tspan font-weight="700">Banco:</tspan> “O chip do Bruno foi trocado?”</text>
+  <rect x="750" y="796" width="580" height="50" rx="10" fill="#f5f3ff"/>
+  <text x="770" y="828" font-size="18" fill="#0f172a"><tspan font-weight="700">Operadora:</tspan> “Sim, há poucos dias.”</text>
+  <rect x="750" y="862" width="580" height="70" rx="12" fill="#dc2626"/>
+  <text x="1040" y="895" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">✕  SMS não é enviado</text>
+  <text x="1040" y="921" text-anchor="middle" font-size="16" fill="#ffffff">e o Bruno confirma a identidade por biometria</text>
+
+  <!-- Rodapé -->
+  <text x="700" y="1003" text-anchor="middle" font-size="17" fill="#334155">Quase toda troca de chip é legítima (celular novo, chip perdido): por isso troca recente pede <tspan font-weight="700">verificação extra</tspan>, não bloqueio.</text>
+</svg>

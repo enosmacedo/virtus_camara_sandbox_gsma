@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="930" viewBox="0 0 1400 930" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="930" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="40" y="52" font-size="28" font-weight="700" fill="#0f172a">Experimento: API CAMARA Location Verification no sandbox GSMA Open Gateway</text>
+  <text x="40" y="82" font-size="17" fill="#475569">O que enviamos, como o sandbox decide a resposta e o que descobrimos nos testes</text>
+
+  <!-- A: nosso script -->
+  <rect x="40" y="130" width="300" height="330" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="60" y="165" font-size="20" font-weight="700" fill="#1e3a8a">Nosso script (Node.js)</text>
+  <text x="60" y="192" font-size="14" fill="#334155">teste01.js · variantes.js</text>
+  <text x="60" y="212" font-size="14" fill="#334155">faixas.js · caso_real.js</text>
+  <rect x="56" y="232" width="268" height="150" rx="6" fill="#ffffff" stroke="#bfdbfe"/>
+  <g font-family="Consolas, monospace" font-size="13" fill="#0f172a">
+    <text x="68" y="256">{</text>
+    <text x="80" y="276">"device": {</text>
+    <text x="92" y="296">"phoneNumber": <tspan fill="#b91c1c" font-weight="700">"+1555000XX"</tspan></text>
+    <text x="80" y="316">},</text>
+    <text x="80" y="336">"area": { CIRCLE, lat, lon, r },</text>
+    <text x="80" y="356">"maxAge": 120</text>
+    <text x="68" y="374">}</text>
+  </g>
+  <text x="60" y="412" font-size="14" fill="#334155">Corpo da requisição: só os</text>
+  <text x="60" y="432" font-size="14" fill="#b91c1c" font-weight="700">2 últimos dígitos (XX) importam</text>
+
+  <!-- B: autenticação -->
+  <rect x="520" y="110" width="360" height="110" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="540" y="145" font-size="19" font-weight="700" fill="#4c1d95">Autenticação GSMA</text>
+  <text x="540" y="172" font-size="14" fill="#334155">realm "camara" · fluxo Client Credentials</text>
+  <text x="540" y="195" font-size="14" fill="#334155">escopo location-verification:verify</text>
+
+  <!-- C: sandbox -->
+  <rect x="520" y="260" width="360" height="250" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="540" y="295" font-size="19" font-weight="700" fill="#14532d">Sandbox CAMARA (mock)</text>
+  <text x="540" y="320" font-family="Consolas, monospace" font-size="12.5" fill="#334155">POST /device-location-verification/v1/verify</text>
+  <rect x="540" y="338" width="320" height="56" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="556" y="362" font-size="15" font-weight="700" fill="#14532d">Decide a resposta pelos 2 últimos</text>
+  <text x="556" y="382" font-size="15" font-weight="700" fill="#14532d">dígitos do phoneNumber</text>
+  <text x="540" y="422" font-size="14" fill="#64748b">Ignora: <tspan text-decoration="line-through">latitude, longitude, raio, maxAge</tspan></text>
+  <text x="540" y="450" font-size="14" fill="#334155">Só valida o formato E.164:</text>
+  <text x="540" y="472" font-size="14" fill="#334155">telefone sem "+" → 400 INVALID_ARGUMENT</text>
+  <text x="540" y="494" font-size="14" fill="#334155">(aceitou até latitude 200 e body sem device)</text>
+
+  <!-- Setas -->
+  <g stroke="#334155" stroke-width="2" fill="none">
+    <line x1="340" y1="160" x2="518" y2="150" marker-end="url(#seta)"/>
+    <line x1="518" y1="190" x2="342" y2="200" marker-end="url(#seta)"/>
+    <line x1="340" y1="320" x2="518" y2="330" marker-end="url(#seta)"/>
+    <line x1="518" y1="450" x2="342" y2="430" marker-end="url(#seta)"/>
+    <line x1="880" y1="366" x2="958" y2="366" marker-end="url(#seta)"/>
+  </g>
+  <g font-size="13" fill="#0f172a">
+    <text x="360" y="143" font-weight="700">① pede token</text>
+    <text x="360" y="222">access token (vale 5 min)</text>
+    <text x="360" y="292" font-weight="700">② POST /verify</text>
+    <text x="360" y="309">Bearer token + JSON</text>
+    <text x="360" y="462" font-weight="700">③ resposta</text>
+    <text x="360" y="478">verificationResult</text>
+    <text x="890" y="356" font-weight="700">XX</text>
+  </g>
+
+  <!-- D: tabela de faixas -->
+  <rect x="960" y="110" width="400" height="400" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="980" y="145" font-size="19" font-weight="700" fill="#0f172a">Final do número → resposta</text>
+  <g font-size="14">
+    <rect x="976" y="160" width="368" height="32" rx="6" fill="#dcfce7"/>
+    <text x="988" y="181" font-weight="700" fill="#0f172a">00–24</text><text x="1060" y="181" fill="#166534" font-weight="700">TRUE</text><text x="1240" y="181" fill="#475569">200</text>
+
+    <rect x="976" y="196" width="368" height="32" rx="6" fill="#fee2e2"/>
+    <text x="988" y="217" font-weight="700" fill="#0f172a">25–49</text><text x="1060" y="217" fill="#991b1b" font-weight="700">FALSE</text><text x="1240" y="217" fill="#475569">200</text>
+
+    <rect x="976" y="232" width="368" height="32" rx="6" fill="#fef3c7"/>
+    <text x="988" y="253" font-weight="700" fill="#0f172a">50–74</text><text x="1060" y="253" fill="#92400e" font-weight="700">PARTIAL</text><text x="1130" y="253" fill="#92400e">(matchRate 74)</text><text x="1240" y="253" fill="#475569">200</text>
+
+    <rect x="976" y="268" width="368" height="32" rx="6" fill="#f1f5f9"/>
+    <text x="988" y="289" font-weight="700" fill="#0f172a">75–89</text><text x="1060" y="289" fill="#334155" font-weight="700">UNKNOWN</text><text x="1240" y="289" fill="#475569">200</text>
+
+    <rect x="976" y="304" width="368" height="32" rx="6" fill="#f8fafc"/>
+    <text x="988" y="325" font-weight="700" fill="#0f172a">90 *</text><text x="1060" y="325" fill="#334155">INVALID_ARGUMENT</text><text x="1240" y="325" fill="#475569">400</text>
+
+    <rect x="976" y="340" width="368" height="32" rx="6" fill="#f8fafc"/>
+    <text x="988" y="361" font-weight="700" fill="#0f172a">91 *</text><text x="1060" y="361" fill="#334155">UNAUTHENTICATED</text><text x="1240" y="361" fill="#475569">401</text>
+
+    <rect x="976" y="376" width="368" height="32" rx="6" fill="#f8fafc"/>
+    <text x="988" y="397" font-weight="700" fill="#0f172a">92</text><text x="1060" y="397" fill="#334155">NOT_FOUND</text><text x="1240" y="397" fill="#475569">404</text>
+
+    <rect x="976" y="412" width="368" height="32" rx="6" fill="#f8fafc"/>
+    <text x="988" y="433" font-weight="700" fill="#0f172a">93</text><text x="1060" y="433" fill="#334155">UNAVAILABLE</text><text x="1240" y="433" fill="#475569">503</text>
+
+    <rect x="976" y="448" width="368" height="32" rx="6" fill="#dcfce7"/>
+    <text x="988" y="469" font-weight="700" fill="#0f172a">99 *</text><text x="1060" y="469" fill="#166534" font-weight="700">TRUE</text><text x="1240" y="469" fill="#475569">200</text>
+  </g>
+  <text x="980" y="500" font-size="12.5" fill="#64748b">* fora da documentação: descoberto nos nossos testes</text>
+
+  <!-- E: descobertas -->
+  <rect x="40" y="550" width="620" height="340" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="588" font-size="20" font-weight="700" fill="#78350f">O que descobrimos</text>
+  <g font-size="15" fill="#1f2937">
+    <text x="60" y="625"><tspan font-weight="700">1.</tspan> Os primeiros números testados terminavam em 10–19,</text>
+    <text x="80" y="647">por isso a resposta era sempre TRUE</text>
+    <text x="60" y="682"><tspan font-weight="700">2.</tspan> Mudar posição (Lyon → São Paulo) ou raio (1 km → 200 km)</text>
+    <text x="80" y="704">não muda a resposta</text>
+    <text x="60" y="739"><tspan font-weight="700">3.</tspan> lastLocationTime é fixo: 2023-09-07T10:40:52Z</text>
+    <text x="60" y="774"><tspan font-weight="700">4.</tspan> UNKNOWN vem sem lastLocationTime: o código precisa tratar</text>
+    <text x="60" y="809"><tspan font-weight="700">5.</tspan> Variando os 2 últimos dígitos, obtivemos todos os resultados:</text>
+    <text x="80" y="831">TRUE, FALSE, PARTIAL, UNKNOWN, 400, 401, 404 e 503</text>
+    <text x="60" y="866" fill="#78350f"><tspan font-weight="700">→</tspan> No sandbox, a localização é simulada; em produção a operadora decide</text>
+  </g>
+
+  <!-- F: caso real -->
+  <rect x="700" y="550" width="660" height="340" rx="12" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+  <text x="720" y="588" font-size="20" font-weight="700" fill="#0f172a">Caso real: antifraude de cartão (caso_real.js)</text>
+  <text x="720" y="614" font-size="14" fill="#475569">Compra presencial → o celular do titular está a até 2 km da loja?</text>
+  <g font-size="15">
+    <rect x="720" y="634" width="200" height="40" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="736" y="660" font-weight="700" fill="#166534">TRUE</text>
+    <text x="940" y="660" fill="#0f172a"><tspan font-weight="700">APROVAR</tspan></text>
+
+    <rect x="720" y="686" width="200" height="40" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="736" y="712" font-weight="700" fill="#92400e">PARTIAL</text>
+    <text x="940" y="712" fill="#0f172a"><tspan font-weight="700">APROVAR</tspan> se matchRate ≥ 70%, senão confirmar</text>
+
+    <rect x="720" y="738" width="200" height="40" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="736" y="764" font-weight="700" fill="#991b1b">FALSE</text>
+    <text x="940" y="764" fill="#0f172a"><tspan font-weight="700">BLOQUEAR</tspan> se valor &gt; R$ 1.000, senão confirmar</text>
+
+    <rect x="720" y="790" width="200" height="40" rx="8" fill="#f1f5f9" stroke="#64748b"/>
+    <text x="736" y="816" font-weight="700" fill="#334155">UNKNOWN / erro</text>
+    <text x="940" y="816" fill="#0f172a"><tspan font-weight="700">FLUXO PADRÃO</tspan> (nunca bloqueia)</text>
+  </g>
+  <text x="720" y="866" font-size="14" fill="#475569">Em produção a operadora localiza o chip pela rede: sem GPS, sem app, sem SMS</text>
+</svg>
